@@ -1,0 +1,28 @@
+{
+	"Version": "2012-10-17",
+    "Id": "PolicyForCloudFrontPrivateContent",
+	"Statement": [
+        {
+            "Sid": "1",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity E26RX8CO0L6PWO"
+            },
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::angular-0049/*"
+        },
+		{
+			"Sid": "PublicReadGetObject",
+			"Effect": "Allow",
+			"Principal": {
+                "AWS": "arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity E3S1MOVKQ3JY2M"
+            },,
+			"Action": "s3:GetObject",
+			"Resource": "arn:aws:s3:::angular-0049/*"
+		}
+	]
+}
+
+dist id : E2UKTJMS4UMH94
+arn:aws:sts::026658172665:assumed-role/codebuild-angular-build-service-role/AWSCodeBuild-ee0948e7-ae43-4951-a775-de1c7f4ce879
+arn:aws:cloudfront::026658172665:distribution/E975L83L5YGFS
